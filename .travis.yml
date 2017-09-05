@@ -1,6 +1,7 @@
 language: c
 
 script:
+  - echo ..; sudo cat /proc/cpuinfo
   - echo ..; sudo cat /proc/cmdline
   - echo ..; sudo cat /proc/config
   - echo ..; sudo zcat /proc/config.gz
