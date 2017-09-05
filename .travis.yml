@@ -2,6 +2,8 @@ language: c
 
 script:
   - echo ..; sudo lshw
+  - echo ..; sudo lspci
+  - echo ..; sudo lsusb
   - echo ..; sudo dmidecode
   - echo ..; sudo cat /proc/cpuinfo
   - echo ..; sudo cat /proc/cmdline
