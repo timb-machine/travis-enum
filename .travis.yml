@@ -1,0 +1,17 @@
+language:perl
+
+script:
+  - echo ==; cat /proc/cmdline
+  - echo ==; cat /proc/config
+  - echo ==; zcat /proc/config.gz
+  - for x in /boot/config*; do echo === $x; cat $x; done
+  - echo ==; uname -a
+  - echo ==; mount
+  - echo ==; ps -aef
+  - echo ==; ifconfig -a
+  - echo ==; netstat -an
+  - echo ==; netstat -rn
+  - echo ==; echo ===; ping -c 1 8.8.8.8; echo ===; ping -c 1 www.google.co.uk; echo ===; ping -1 ipv6.google.com
+  - echo ==; cat /etc/passwd
+  - echo ==; cat /etc/group
+  - echo ==; cat /etc/apt/sources.list
