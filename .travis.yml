@@ -10,6 +10,7 @@ script:
   - echo ..; sudo uname -a
   - echo ..; sudo sysctl -a
   - echo ..; sudo mount
+  - echo ..; sudo dpkg -l
   - echo ..; sudo ps -aef
   - echo ..; sudo ifconfig -a
   - echo ..; sudo netstat -an
