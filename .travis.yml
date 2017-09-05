@@ -8,6 +8,7 @@ script:
   - for x in /boot/config*; do sudo echo ... $x; cat $x; done
   - echo ..; sudo dmesg
   - echo ..; sudo uname -a
+  - echo ..; sudo uptime
   - echo ..; sudo sysctl -a
   - echo ..; sudo mount
   - echo ..; sudo dpkg -l
