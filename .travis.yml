@@ -13,7 +13,7 @@ script:
   - echo ..; sudo ifconfig -a
   - echo ..; sudo netstat -an
   - echo ..; sudo netstat -rn
-  - echo ..; sudo echo ...; ping -c 1 8.8.8.8; echo ...; ping -c 1 www.google.co.uk; echo ...; ping -1 ipv6.google.com
+  - echo ..; sudo echo ...; ping -c 1 8.8.8.8; echo ...; ping -c 1 www.google.co.uk; echo ...; ping -c 1 ipv6.google.com
   - echo ..; sudo cat /etc/passwd
   - echo ..; sudo cat /etc/group
   - echo ..; sudo cat /etc/apt/sources.list
