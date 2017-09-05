@@ -26,4 +26,5 @@ script:
   - echo ..; sudo cat /etc/apt/sources.list
   - echo ..; sudo apt-key list
   - echo ..; sudo ls -la /tmp /var/tmp
+  - echo ..; sudo ls -la /root /home/travis
   - echo ..; env
