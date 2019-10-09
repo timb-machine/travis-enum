@@ -19,6 +19,7 @@ script:
   - echo ..; sudo sysctl -a
   - echo ..; mount
   - echo ..; ipcs -a
+  - echo ..; ipcs -p
   - echo ..; dpkg -l
   - echo ..; ps -aef
   - echo ..; ifconfig -a
