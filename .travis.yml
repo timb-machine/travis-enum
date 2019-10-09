@@ -36,4 +36,5 @@ script:
   - echo ..; apt-key list
   - echo ..; ls -la /tmp /var/tmp
   - echo ..; sudo ls -la /root /home/travis
+  - echo ..; sudo cat /etc/ssh/sshd_config
   - echo ..; env
