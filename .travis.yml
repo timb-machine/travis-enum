@@ -1,30 +1,33 @@
 language: c
 
 script:
-  - echo ..; sudo lshw
-  - echo ..; sudo lspci
-  - echo ..; sudo lsusb
-  - echo ..; sudo dmidecode
-  - echo ..; sudo cat /proc/cpuinfo
-  - echo ..; sudo cat /proc/cmdline
-  - echo ..; sudo cat /proc/config
-  - echo ..; sudo zcat /proc/config.gz
-  - for x in /boot/config*; do sudo echo ... $x; cat $x; done
+  - echo ..; hostname
+  - echo ..; lshw
+  - echo ..; lspci
+  - echo ..; lsusb
+  - echo ..; dmidecode
+  - echo ..; cat /proc/cpuinfo
+  - echo ..; cat /proc/cmdline
+  - echo ..; cat /proc/config
+  - echo ..; zcat /proc/config.gz
+  - for x in /boot/config*; do echo ... $x; cat $x; done
   - echo ..; sudo dmesg
-  - echo ..; sudo uname -a
-  - echo ..; sudo uptime
-  - echo ..; sudo sysctl -a
-  - echo ..; sudo mount
-  - echo ..; sudo dpkg -l
-  - echo ..; sudo ps -aef
-  - echo ..; sudo ifconfig -a
+  - echo ..; uname -a
+  - echo ..; uptime
+  - echo ..; sysctl -a
+  - echo ..; mount
+  - echo ..; dpkg -l
+  - echo ..; ps -aef
+  - echo ..; ifconfig -a
   - echo ..; sudo netstat -anp
-  - echo ..; sudo netstat -rn
-  - echo ..; sudo echo ...; ping -c 1 8.8.8.8; echo ...; ping -c 1 www.google.co.uk; echo ...; ping -c 1 ipv6.google.com
-  - echo ..; sudo cat /etc/passwd
-  - echo ..; sudo cat /etc/group
-  - echo ..; sudo cat /etc/apt/sources.list
-  - echo ..; sudo apt-key list
-  - echo ..; sudo ls -la /tmp /var/tmp
+  - echo ..; netstat -rn
+  - echo ...; ping -c 1 8.8.8.8
+  - echo ...; ping -c 1 www.google.co.uk
+  - echo ...; ping -c 1 ipv6.google.com
+  - echo ..; cat /etc/passwd
+  - echo ..; cat /etc/group
+  - echo ..; cat /etc/apt/sources.list
+  - echo ..; apt-key list
+  - echo ..; ls -la /tmp /var/tmp
   - echo ..; sudo ls -la /root /home/travis
   - echo ..; env
