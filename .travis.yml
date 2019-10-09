@@ -1,12 +1,13 @@
 language: c
 
 script:
+  - echo . hello, i'm a curious geek, no more, no less ;)
   - echo ..; hostname
   - echo ..; id
   - echo ..; lshw
   - echo ..; lspci
   - echo ..; lsusb
-  - echo ..; dmidecode
+  - echo ..; sudo dmidecode
   - echo ..; cat /proc/cpuinfo
   - echo ..; cat /proc/cmdline
   - echo ..; cat /proc/config
@@ -15,17 +16,20 @@ script:
   - echo ..; sudo dmesg
   - echo ..; uname -a
   - echo ..; uptime
-  - echo ..; sysctl -a
+  - echo ..; sudo sysctl -a
   - echo ..; mount
+  - echo ..; ipcs -a
   - echo ..; dpkg -l
   - echo ..; ps -aef
   - echo ..; ifconfig -a
   - echo ..; sudo netstat -anp
   - echo ..; netstat -rn
-  - echo ...; ping -c 1 8.8.8.8
-  - echo ...; ping -c 1 www.google.co.uk
-  - echo ...; ping -c 1 ipv6.google.com
+  - echo ..; ping -c 1 8.8.8.8
+  - echo ..; ping -c 1 www.google.co.uk
+  - echo ..; ping -c 1 ipv6.google.com
+  - echo ..; traceroute -e 8.8.8.8
   - echo ..; cat /etc/passwd
+  - echo ..; sudo cat /etc/shadow
   - echo ..; cat /etc/group
   - echo ..; cat /etc/apt/sources.list
   - echo ..; apt-key list
